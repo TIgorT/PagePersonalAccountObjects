@@ -54,8 +54,6 @@ public class MoneyTransferTest {
         DashboardPage dashboardPage = new DashboardPage();
         TransferPage transferPage = new TransferPage();
 
-        var secondCardData = DataHelper.getCardNumberSecond();
-        var theBalanceOfTheSecondCard = dashboardPage.getCardBalance(secondCardData);
         var transferAmount = DataHelper.generateValidSum(1);
         dashboardPage.topUpButtonFirstCard();
         transferPage.depositError(transferAmount, "Ошибка! Произошла ошибка");
@@ -68,9 +66,7 @@ public class MoneyTransferTest {
 
         DashboardPage dashboardPage = new DashboardPage();
         TransferPage transferPage = new TransferPage();
-
-        var firstCardData = DataHelper.getCardNumberFirst();
-        var theBalanceOfTheFirstCard = dashboardPage.getCardBalance(firstCardData);
+        
         var transferAmount = DataHelper.generateValidSum(1);
         dashboardPage.topUpButtonSecondCard();
         transferPage.depositError(transferAmount, "Ошибка! Произошла ошибка");
