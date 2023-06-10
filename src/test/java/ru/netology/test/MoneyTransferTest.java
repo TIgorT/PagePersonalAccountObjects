@@ -66,7 +66,7 @@ public class MoneyTransferTest {
 
         DashboardPage dashboardPage = new DashboardPage();
         TransferPage transferPage = new TransferPage();
-        
+
         var transferAmount = DataHelper.generateValidSum(1);
         dashboardPage.topUpButtonSecondCard();
         transferPage.depositError(transferAmount, "Ошибка! Произошла ошибка");
@@ -155,19 +155,6 @@ public class MoneyTransferTest {
         Assertions.assertEquals(expectedSecondCardCardBalance, actualSecondCardCardBalance);
     }
 
-//    @Test
-//    @DisplayName("Transfer to the second card without specifying from which card")
-//    public void transferToTheSecondCardWithoutSpecifyingFromWhichCard() {
-//
-//        DashboardPage dashboardPage = new DashboardPage();
-//        TransferPage transferPage = new TransferPage();
-//
-//        var firstCardData = DataHelper.getCardNumberFirst();
-//        var theBalanceOfTheFirstCard = dashboardPage.getCardBalance(firstCardData);
-//        var transferAmount = DataHelper.generateValidSum(theBalanceOfTheFirstCard);
-//        dashboardPage.topUpButtonSecondCard();
-//        transferPage.depositError(transferAmount, "Ошибка! Произошла ошибка");
-//    }
 
     @Test
     @DisplayName("Transfer from the first card to the  over the balance")
